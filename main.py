@@ -2,6 +2,10 @@ from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
 
+@app.route("/")
+def home_page():
+    return "<h1>Home page</h1>"
+
 @app.route("/<name>/")
 def home(name):
     return render_template("index.html")
