@@ -11,6 +11,10 @@ def home_page():
 def home(name):
     return render_template("index.html")
 
+@app.route("/ved/")
+def ved():
+    return render_template("temp.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
