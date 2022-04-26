@@ -27,7 +27,8 @@ def login():
 def user():
     if "user" in session:
         user = session["user"]
-        return f"<h1>{user}</h1>"
+        return render_template("temp.html",use = user)
+        # return f"<h1>{user}</h1>"
     else:
         return redirect(url_for("login"))
 
